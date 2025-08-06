@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To My Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top left, #ffe0ec, #ffd6f0);
+      font-family: 'Open Sans', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+    }
+    .container {
+      position: relative;
+      text-align: center;
+      top: 30%;
+      transform: translateY(-30%);
+    }
+    .letter {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2em;
+      color: #d63384;
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      background: #fff0f6;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .button {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 40px;
+      background: #ff69b4;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 10px #ff69b4;
+      transition: 0.3s ease;
+    }
+    .button:hover {
+      background: #ff85c1;
+      box-shadow: 0 0 20px #ff85c1;
+    }
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('https://i.imgur.com/ghDcDHE.png') no-repeat center/cover;
+      animation: float 10s infinite ease-in;
+      opacity: 0.6;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="letter">
+      To my sweetest Kutty Pau,<br><br>
+      Just a little surprise for the most special person in my life. 💖<br>
+      You light up my world every day. 🌹
+    </div>
+    <a href="iloveyou.html"><button class="button">💌 Open Me 💌</button></a>
+  </div>
+
+  <div class="hearts">
+    <script>
+      for (let i = 0; i < 15; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+        document.querySelector(".hearts").appendChild(heart);
+      }
+    </script>
+  </div>
+</body>
+</html>
